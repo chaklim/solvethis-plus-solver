@@ -10,6 +10,7 @@ An mini game solver using A* search algorithm
     1: initial movable block position(s)
     2: final block position(s)
     3: overlapped movable block & final block position(s)
+   -1: black block position(s)
 ]
 ```
 
