@@ -5,7 +5,7 @@ An mini game solver using A* search algorithm
 ```
 [# of rows (r)] [# of columns (c)]
 [
-  r * c numbers represents:
+  r * c numbers ranged -1 to 3 represents:
     0: blank
     1: initial movable block position(s)
     2: final block position(s)
