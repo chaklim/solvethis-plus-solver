@@ -6,7 +6,7 @@ using namespace std;
 
 typedef unsigned long long GAME_STATE;          // flattened game state representation
 
-const bool isPrintSolutionWithState = true;
+const bool isPrintSolutionWithState = false;
 const int8_t l = 8, l2 = 64;                    // limit of width and height of the puzzle, l2 = l^2
 const int8_t dx[4] = {0, 1, 0, -1};
 const int8_t dy[4] = {-1, 0, 1, 0};
