@@ -1,12 +1,17 @@
 # SolveThis+ / 1d1q  Solver
 An mini game solver using A* search algorithm
 
+## Application URL
+[iOS](https://itunes.apple.com/app/solvethis/id905858795?mt=8)
+/
+[Android](https://play.google.com/store/apps/details?id=jp.co.ponos.tokerukana)
+
 ## Input
 ```
 [# of rows (r)] [# of columns (c)]
 [
   r * c numbers ranged -1 to 3 represents:
-    0: blank
+    0: blank position(s)
     1: initial movable block position(s)
     2: final block position(s)
     3: overlapped movable block & final block position(s)
