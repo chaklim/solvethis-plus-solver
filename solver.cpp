@@ -88,12 +88,16 @@ inline GAME_STATE stateFromLocations(const vector<Point> &locations) {
 void printState(GAME_STATE state, GAME_STATE blockState) {
   GAME_STATE ti, tj, tk;
   for (ti = 0, tk = 1; ti < rc; ti++, tk <<= 1) {
-    if ((blockState & tk) > 0) {
-      printf(" #");
+    if (((state & endState) & tk) > 0) {
+      printf(" ◉");
+    } else if ((endState & tk) > 0) {
+      printf(" ◯");
+    } else if ((blockState & tk) > 0) {
+      printf(" ▢");
     } else if ((state & tk) > 0) {
-      printf(" @");
+      printf(" ◎");
     } else {
-      printf(" _");
+      printf(" ◦");
     }
     if (ti % (GAME_STATE)c == (GAME_STATE)c - 1) {
       printf("\n");
@@ -265,15 +269,15 @@ int main() {
     }
   }
 
-  if (isPrintSolutionWithState) {
-    printState(stateFromLocations(startingPoints), blockState);
-  }
-
   endState = stateFromLocations(endingPoints);
   blockState = stateFromLocations(blockPoints);
   initCollideState();
   findMinimumDistanceFromAnyPointToAnyFinalPoint();
   
+  if (isPrintSolutionWithState) {
+    printState(stateFromLocations(startingPoints), blockState);
+  }
+
   if (aStar()) {
     printf("\ngame end\n");
   } else {
