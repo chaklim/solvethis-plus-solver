@@ -34,21 +34,23 @@ An mini game solver using A* search algorithm
 
 ## Usage
 ```
-make solver
+# make solver
+g++ -O3 -std=c++11 solver.cpp -o solver
 
+# run solver with sample input
 ./solver < sampleInput/test_1.in
 ```
 
 ## Expected Output
 ```
 number of steps: 16
-U U R R D L U U R U R U R R U R 
+U U R R D L U U R U R U R R U R
 game end
 ```
 
 ## Explanation of expected output
 ```
-number of steps: minimum # of steps 
+number of steps: minimum # of steps
 U: move upwards
 R: move towards right
 L: move towards left

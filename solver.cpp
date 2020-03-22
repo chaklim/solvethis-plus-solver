@@ -2,6 +2,7 @@
 #include <vector>
 #include <queue>
 #include <unordered_map>
+#include <cstring>
 using namespace std;
 
 typedef unsigned long long GAME_STATE;          // flattened game state representation
