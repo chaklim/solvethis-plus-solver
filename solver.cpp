@@ -60,7 +60,7 @@ struct Node {
   int8_t mv;                                    // number representation for last movement, -1 for the first node
   int8_t fx;                                    // f(x)
   GAME_STATE state;                             // game state representation
-  
+
   Node(Node *q, const int8_t &gx, const int8_t &m, const GAME_STATE &x) {
     p = q;
     s = gx;
@@ -94,7 +94,7 @@ void printState(GAME_STATE state, GAME_STATE blockState) {
     } else if ((endState & tk) > 0) {
       printf(" ◯");
     } else if ((blockState & tk) > 0) {
-      printf(" ▢");
+      printf(" #");
     } else if ((state & tk) > 0) {
       printf(" ◎");
     } else {
@@ -274,7 +274,7 @@ int main() {
   blockState = stateFromLocations(blockPoints);
   initCollideState();
   findMinimumDistanceFromAnyPointToAnyFinalPoint();
-  
+
   if (isPrintSolutionWithState) {
     printState(stateFromLocations(startingPoints), blockState);
   }
