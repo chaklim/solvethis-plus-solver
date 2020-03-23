@@ -59,7 +59,7 @@ D: move downwards
 
 ## Limitation
 - At most 8x8 (because using unsigned long long represents game state)
-- Three unsolved input in unsolved folder
+- One unsolved input in unsolved folder
 
 # Note
 If you want to print every state from start to end, you can change const variable isPrintSolutionWithState to true.
