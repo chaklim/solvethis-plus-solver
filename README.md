@@ -35,7 +35,7 @@ An mini game solver using A* search algorithm
 ## Usage
 ```
 # make solver
-g++ -O3 -std=c++11 solver.cpp -o solver
+make
 
 # run solver with sample input
 ./solver < sampleInput/test_1.in
